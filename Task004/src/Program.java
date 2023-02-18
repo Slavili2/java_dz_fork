@@ -32,20 +32,15 @@ public class Program {
         JSONObject jo = new JSONObject();
         BufferedWriter writer = new BufferedWriter(new FileWriter("destination.txt"));
 
-
         for (int i = 0; i < array.length(); i++) {
             jo = new JSONObject(array.get(i).toString());
-            //Студент [фамилия] получил [оценка] по предмету [предмет].
+
             writer.write("Студент "+jo.get("фамилия")+" получил "+jo.get("оценка")+" по предмету "+jo.get("предмет")+".\n");
             destinationStringBuilder.append("Студент "+jo.get("фамилия")+" получил "+jo.get("оценка")+" по предмету "+jo.get("предмет")+".\n");
         }
         writer.close();
 
         System.out.println(destinationStringBuilder.toString());
-
-
-
-
     }
     catch(FileNotFoundException e) {
         System.out.println(e.getMessage());
