@@ -52,7 +52,6 @@ public class Program {
         while(stepSize < userArray.length){
             for(int i = 0; i < userArray.length; i+=2*stepSize){
                 uMergeV1(currentArray, i, currentArray, i+stepSize, arrDest, i, stepSize);
-                //System.out.println(i);
             }
 
             tmp = currentArray;
